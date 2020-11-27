@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourTweetFrag">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="invisible"
+                app:contentPadding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/recycelrView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/likespr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#292626"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView12"
+                        app:layout_constraintEnd_toEndOf="@+id/textView12"
+                        app:layout_constraintStart_toStartOf="@+id/textView12" />
+
+                    <TextView
+                        android:id="@+id/postspr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#292626"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView8"
+                        app:layout_constraintEnd_toEndOf="@+id/textView8"
+                        app:layout_constraintStart_toStartOf="@+id/textView8" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginBottom="44dp"
+                        android:text="Posts"
+                        android:textColor="#292626"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/uploadp" />
+
+                    <TextView
+                        android:id="@+id/namepr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Tushar Jain"
+                        android:textAlignment="center"
+                        android:textColor="@color/design_default_color_on_secondary"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/uploadp"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/uploadp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/upload"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:backgroundTint="#E91E63"
+                                android:foregroundTint="#FFFFFF"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:srcCompat="@drawable/plus" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="44dp"
+                        android:text="Following"
+                        android:textAlignment="center"
+                        android:textColor="#292626"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="44dp"
+                        android:text="Likes"
+                        android:textAlignment="center"
+                        android:textColor="#292626"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView11"
+                        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+                    <TextView
+                        android:id="@+id/followingpr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="#292626"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView11"
+                        app:layout_constraintEnd_toEndOf="@+id/textView11"
+                        app:layout_constraintStart_toStartOf="@+id/textView11" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycelrView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/progress"
+        android:progressTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
